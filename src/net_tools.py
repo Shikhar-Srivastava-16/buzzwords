@@ -12,6 +12,17 @@ import numpy
 
 
 
+class GRUNetwork(nn.Module):
+    def __init__(self, input_size, hidden_size, num_layers, output_size):
+        super(GRUNetwork, self).__init__()
+        self.gru = nn.GRU(input_size, hidden_size, num_layers, batch_first=True)
+        self.fc = nn.Linear(hidden_size, output_size)
+
+    def forward(self, x):
+        out, _ = self.gru(x)
+        out = out[:, -1, :]  # Get the last time step
+        out = self.fc(out)
+        return out
 class ConvNet(nn.Module):
     def __init__(self, in_channels: int, hidden_layer_nodes: int, out_channels: int):
         super().__init__()
