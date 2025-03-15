@@ -24,4 +24,7 @@ For ideal results, run this program on a platform that fulfills these requiremen
 # References
 
 ## Deep Learning
-https://developer.ibm.com/articles/cc-machine-learning-deep-learning-architectures/    : On architectures
+https://developer.ibm.com/articles/cc-machine-learning-deep-learning-architectures/                             : On architectures
+https://arxiv.org/abs/2410.01201                                                                                : On RNNs vs Transformers
+https://rbcborealis.com/research-blogs/minimal-lstms-and-grus-simple-efficient-and-fully-parallelizable/        : On minGRU
+https://news.ycombinator.com/item?id=41734344                                                                   : On building minGRU
